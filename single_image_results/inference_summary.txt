@@ -1,0 +1,51 @@
+=================================================================
+  SINGLE IMAGE INFERENCE REPORT
+  RETFound ViT-Large + Multi-Disease Screening Heads
+  Checkpoint : best_stage2.pth
+  Image      : C:\Hemant Kothari\VSC\Hemant Project RUN 2 - original - messidor evaluation run\capstone cv\dataset\preprocessed\odir5k\preprocessed_images\23_left.png
+=================================================================
+
+  TOP FINDINGS (positive predictions):
+    > Hypertensive Retinopathy
+    > Age-Related Macular Degeneration (AMD)
+
+-----------------------------------------------------------------
+  ALL CONDITIONS -- sorted by confidence (highest first)
+-----------------------------------------------------------------
+  Condition                                        Prob      Call  Certainty
+  ---------------------------------------------------------------
+  Hypertensive Retinopathy                        0.787  POSITIVE     0.573
+  Normal Retina                                   0.580  suppressed     0.161
+  Age-Related Macular Degeneration (AMD)          0.516  POSITIVE     0.031
+  Glaucoma                                        0.390  negative     0.221
+  Diabetic Retinopathy (Presence)                 0.141  negative     0.718
+
+  [*] Normal Retina: Suppressed: highest disease confidence (0.787) > normal confidence (0.580)
+
+-----------------------------------------------------------------
+  DR SEVERITY (CORAL ordinal head)
+-----------------------------------------------------------------
+  Predicted grade    : 0  ->  Grade 0 -- No DR
+  Expected grade     : 0.005  (soft/continuous)
+  Grade certainty    : 0.9974
+  Boundary probs     : [0.0029, 0.0022, 0.0001, 0.0001]
+  Interpretation     : (P(grade>0), P(grade>1), P(grade>2), P(grade>3))
+
+-----------------------------------------------------------------
+  ATTENTION ROLLOUT
+-----------------------------------------------------------------
+  ViT blocks processed   : 24
+  Patch grid             : 14x14
+  Discard ratio          : 0.9
+  Peak attention patch   : row 13, col 13
+  Approx pixel location  : ~(216, 216) in 224x224
+
+-----------------------------------------------------------------
+  EMBEDDING
+-----------------------------------------------------------------
+  512-dim embedding saved in inference_results.json  (embedding_512d key)
+  Use for vector-DB similarity search / RAG grounding.
+
+=================================================================
+  Output directory : C:\Hemant Kothari\VSC\Hemant Project RUN 2 - original - messidor evaluation run\capstone cv\src\single_image_results/
+=================================================================

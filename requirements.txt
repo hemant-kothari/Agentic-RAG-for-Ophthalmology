@@ -1,0 +1,8 @@
+faiss-cpu
+sentence-transformers
+groq
+gradio
+duckduckgo-search
+python-dotenv
+pdfplumber
+numpy

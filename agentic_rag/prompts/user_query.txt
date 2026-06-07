@@ -1,0 +1,8 @@
+## USER QUESTION
+{query}
+
+## RETRIEVED GUIDELINE CONTEXT
+{context}
+
+---
+Please answer the question above using ONLY the guideline context provided. Follow the response structure in your system instructions. Cite source organisations and guideline IDs for all clinical statements.

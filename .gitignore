@@ -1,0 +1,56 @@
+# ── Secrets ──────────────────────────────────────────────────────────────────
+.env
+
+# ── Python ───────────────────────────────────────────────────────────────────
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# ── Virtual environments ──────────────────────────────────────────────────────
+venv/
+.venv/
+env/
+.env/
+
+# ── Large binary / data files ─────────────────────────────────────────────────
+# These are too large for GitHub (LFS optional)
+# Comment out if you want to push the pre-built VDB
+# faiss.index
+# metadata.pkl
+# chunks.jsonl
+
+# Raw PDF source documents (large, copyrighted)
+guidance/
+guidance 2/
+
+# Processed JSON intermediate files (can be regenerated)
+json/
+json_g2/
+
+# PDF text previews (regenerable)
+process_guidance2/pdf_previews/
+
+# ── NumPy arrays (large attention maps) ───────────────────────────────────────
+single_image_results/*.npy
+
+# ── IDE / OS ──────────────────────────────────────────────────────────────────
+.vscode/
+.idea/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# ── Jupyter ───────────────────────────────────────────────────────────────────
+.ipynb_checkpoints/
+*.ipynb
+
+# ── Logs and caches ───────────────────────────────────────────────────────────
+*.log
+.cache/

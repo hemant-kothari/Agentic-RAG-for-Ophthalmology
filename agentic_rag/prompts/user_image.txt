@@ -1,0 +1,16 @@
+You are reviewing AI retinal image analysis results. Based on the context below, provide a structured clinical guideline summary.
+
+## AI ANALYSIS RESULTS
+{findings_summary}
+
+## DETECTED CONDITIONS
+{conditions_block}
+
+## DR SEVERITY
+{dr_severity_block}
+
+## RETRIEVED GUIDELINE CONTEXT
+{context}
+
+---
+Please generate a structured clinical context report following the format specified in your system instructions. Address each detected finding (both CONFIRMED and POSSIBLE) separately. Cite the guideline source for every recommendation.
