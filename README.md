@@ -110,7 +110,7 @@ The FAISS vector database contains **2,163 chunks** from **92 documents** across
 | India Vision 2025 | 1 | 35 |
 | **Total** | **92** | **2,163** |
 
-Diseases covered: **Diabetic Retinopathy · Diabetic Macular Edema · Age-Related Macular Degeneration · Glaucoma · Hypertensive Retinopathy**
+Diseases covered: **Diabetic Retinopathy · Diabetic Macular · Age-Related Macular Degeneration · Glaucoma · Hypertensive Retinopathy**
 
 ---
 
@@ -150,6 +150,13 @@ capstone/
 │   ├── inference_summary.txt       # Human-readable summary
 │   ├── attention_overlay.png       # Attention heatmap overlay
 │   └── attention_summary_figure.png
+|
+├── till vdb                        # process NICE documents (guidance folder)
+|   ├── chunk_embed_vdb.py
+|   ├── download_nice_guidance.py
+|   ├── download_nice_products.py
+|   ├── loopover_pdf_json.py
+|   ├──pdftojson.py
 │
 ├── faiss.index                     # FAISS vector index (2163 vectors)
 ├── metadata.pkl                    # Chunk metadata (guideline IDs, sources, etc.)
@@ -158,7 +165,7 @@ capstone/
 ├── run_rag.py                      # CLI entry point
 ├── rag_app.py                      # Gradio Web UI
 │
-├── .env                            # API keys (NOT committed — see Setup)
+├── .env                            # API keys (NOT committed)
 ├── requirements.txt                # Python dependencies
 └── paper_agentic_rag.md            # Academic paper (~15 pages)
 ```
@@ -172,7 +179,7 @@ capstone/
 ```bash
 # Clone the repository
 git clone https://github.com/<your-username>/retinal-rag.git
-cd retinal-rag
+cd ophthalmology-rag
 
 # Install dependencies
 pip install -r requirements.txt
@@ -303,12 +310,6 @@ python process_guidance2/test_g2_retrieval.py
 
 ---
 
-## Paper
-
-The academic paper for this component is available at [`paper_agentic_rag.md`](./paper_agentic_rag.md) (~15 pages, ~6,800 words).
-
----
-
 ## Dependencies
 
 ```
@@ -322,11 +323,6 @@ pdfplumber
 numpy
 ```
 
-Install all at once:
-```bash
-pip install -r requirements.txt
-```
-
 ---
 
 ## License
@@ -335,5 +331,5 @@ This project is developed as part of a capstone research project. All clinical g
 
 ---
 
-*Part of the Retinal AI Capstone Project — Agentic RAG Component*
-*Companion repository: [retinal-vit](https://github.com/<your-username>/retinal-vit) (Vision Transformer classifier)*
+*Part of the Multi-Disease Retinal Screening via Vision Transformer with Agentic RAG-Based Clinical Decision Support*
+*Ophthalmology-ViT: (https://github.com/hemant-kothari/Ophthalmology-ViT) (ViT based multi-disease retinal screening system)*
